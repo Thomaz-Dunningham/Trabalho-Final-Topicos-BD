@@ -15,12 +15,12 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: 123456
-    # logging:
-    #   driver: gelf
-    #   options:
-    #     gelf-address: "udp://localhost:12201"
-    #     tag: "mongodb-log"
-    # shm_size: 25g
+    logging:
+      driver: gelf
+      options:
+        gelf-address: "udp://localhost:12201"
+        tag: "mongodb-log"
+    shm_size: 25g
 networks:
   jupyter-mongo-net:
     external: true
